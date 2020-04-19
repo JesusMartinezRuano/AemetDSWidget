@@ -1,0 +1,119 @@
+#videoBackground {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -2;
+  
+  
+}
+
+.fadein {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+.fadeOut {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: ". . . ." ". contenedor contenedor ." ". contenedor contenedor ." ". . . .";
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px 64px;
+  grid-template-rows: 72px 72px 72px 72px 72px 72px 72px;
+  gap: 0px 0px;
+  grid-template-areas: "logo logo logo logo logo logo logo localizacion localizacion localizacion localizacion localizacion localizacion localizacion localizacion localizacion localizacion" "logo logo logo logo logo logo logo localizacion localizacion localizacion localizacion localizacion localizacion localizacion localizacion localizacion localizacion" "logo logo logo logo logo logo logo fecha fecha fecha fecha fecha fecha fecha fecha fecha fecha" "logo logo logo logo logo logo logo fecha fecha fecha fecha fecha fecha fecha fecha fecha fecha" "descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion descripcion" "TMax TMax TMax Tmin Tmin Tmin Precipitacion Precipitacion Precipitacion Viento Viento Viento Viento Viento Viento acerca acerca" "TMax TMax TMax Tmin Tmin Tmin Precipitacion Precipitacion Precipitacion Viento Viento Viento Viento Viento Viento aemet aemet";
+  grid-area: contenedor;
+  font-family: 'Isidora Light';
+  color: #FFF;
+  font-size: 60px;
+}
+
+.logo { grid-area: logo;
+  
+}
+
+.localizacion { 
+  grid-area: localizacion;
+  line-height : 72px;
+    font-family: 'Isidora-Bold'!important;
+    align-self: center;
+    text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000; 
+    
+    
+ 
+  
+ }
+
+.fecha {
+  grid-area: fecha;
+  font-family: 'Isidora-Bold'!important;
+  font-size: 60px !important;
+  text-shadow: -1px 0 #000000, 0 1px #000000, 1px 0 #000000, 0 -1px #000000;  
+}
+
+.descripcion { grid-area: descripcion;
+  font-size: 66px !important; }
+
+.TMax { 
+  grid-area: TMax;
+  font-family: 'Isidora-Bold'!important;
+  font-size: 90px !important;
+  color: #ff0000 !important;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+
+.Tmin { 
+  grid-area: Tmin;
+  font-family: 'Isidora-Bold'!important;
+  font-size: 90px !important; 
+  color: #00f !important;
+  text-align: center !important;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; }
+
+.Precipitacion { grid-area: Precipitacion;
+  text-align: center; }
+
+.Viento { grid-area: Viento;
+  text-align: center; } 
+
+.acerca { grid-area: acerca;
+  display: flex;
+  align-items: flex-end;
+  
+  
+  text-align: right !important;
+  font-size: 24px !important; }
+
+  .aemet { grid-area: aemet;
+    display: flex;
+    align-items: flex-end;
+    
+     }
+
+
+  @font-face {
+    font-family: 'Isidora Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Isidora Light'), url('/weekWeather/fonts/Latinotype - Isidora-Light.woff') format('woff');
+    }
+
+    @font-face {font-family: "Isidora-Bold";
+    font-family: 'Isidora-Bold';
+    font-style: normal;
+    font-weight: normal;
+      src:local('Isidora-Bold'),url("/weekWeather/fonts/Isidora-Bold.woff") format("woff");
+      
+    }
