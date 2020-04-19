@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/weekWeather.css">
+        <style>body { background-color: #000000; }</style>     <!-- fondo eventual entre videos   -->
+    </head>
+<body>
+    <div id="background">
+        <video autoplay muted loop id="videoBackground">  <!-- loop   -->
+            <source src="videos/primavera/bf6e3ded10b53b4004afb84a7e148621.mp4" type="video/mp4" id="videoSource">
+                Your browser does not support HTML5 video.        
+        </video>
+    </div>
+    <div class="grid-container">
+        <div class="contenedor" id="contenedor">
+            <div class="logo"><object class="icon" id="svg-object" data="icons/33.svg" type="image/svg+xml" width="448" height="288" ></object></div>
+            <div class="localizacion" id="local">local</div>
+            <div class="fecha" id="fecha"> fecha</div>
+            <div class="descripcion" id="desc">Intervalos nubosos con lluvia</div>
+            <div class="TMax" id="tmax">12&#730;C</div>
+            <div class="Tmin" id="tmin">2&#730;C</div>
+            <div class="Precipitacion" id="prep">lluvia <br />20%</div>
+            <div class="Viento" id="viento">Vientos<br>S - 5 Km/h</div>
+            <div class="acerca">Información avalada por</div>
+            <div class="aemet"><object width="128" class="icon" id="svg-object" data="logos/aemet.svg" type="image/svg+xml" ></object></div>
+        </div>
+    </div>
+    
+    
+    <script src="js/jquery-3.4.1.min.js"></script>    
+    <script src="js/jquery.fittext.js"></script>
+    <script src="script/main.js">$(document).ready(function(e) {
+        getData();
+        
+     });
+     </script>
+</body>
